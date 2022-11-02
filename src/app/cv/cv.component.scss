@@ -1,0 +1,158 @@
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 300px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+
+.panel {
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    display: none;
+    flex-direction: column;
+}
+
+.description {
+    margin-left: 30px;
+    width: 250px;
+}
+
+
+.container {
+    padding-top: 20px;
+    width: 90%;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+}
+
+
+.btn-add-show {
+    height: 53px;
+    margin-left: 20px;
+    border: none;
+    background-color: rgb(64, 168, 64);
+    color: white;
+}
+
+.skills-exprience-container {
+    width: 100%;
+    display: flex;
+}
+
+.avatar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.contact-info {
+    margin-left: 40px;
+}
+
+.avatar-img {
+    height: 107px;
+    width: 109px;
+    border-radius: 50%;
+}
+
+.project-add {
+    height: 300px;
+    width: 500px;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 120px;
+    left: 166px;
+
+    .project-name,
+    .short-description {
+        margin-bottom: 20px;
+        height: 30px;
+        width: 250px;
+        border-radius: 5px;
+        padding-left: 10px;
+        border: 1px solid lightgray;
+    }
+
+    .btn-add {
+        height: 30px;
+        width: 260px;
+        border-radius: 5px;
+        border: 1px solid rgb(64, 168, 64);
+        background-color: transparent;
+        transition: 0.4s;
+    }
+
+    .btn-add:hover {
+        border: 1px solid white;
+        background-color: rgb(64, 168, 64);
+    }
+}
+
+.btn-edit, .btn-delete {
+    background-color: transparent;
+    width: 150px;
+    border: none;
+    color: black;
+    border: 1px solid rgb(247, 247, 33);
+    transition: 0.4s;
+    float: left;
+}
+
+.btn-delete {
+    border: 1px solid rgb(180, 38, 38);   
+}
+
+.btn-save-edit {
+        height: 30px;
+        width: 260px;
+        border-radius: 5px;
+        border: 1px solid rgb(247, 247, 33);
+        background-color: transparent;
+        transition: 0.4s;
+}
+
+.btn-save-edit:hover {
+    border: 1px solid white;
+    background-color: rgb(247, 247, 33);
+}
+
+.btn-edit:hover {
+    color: white;
+    background-color: rgb(247, 247, 33);
+}
+
+.btn-delete:hover {
+    color: white;
+    background-color: rgb(180, 38, 38);
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}

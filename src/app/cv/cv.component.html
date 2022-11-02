@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="avatar">
+        <img class="avatar-img" src="https://cdn.thetealmango.com/wp-content/uploads/2021/07/light-e1626271820100.jpg"
+            alt="">
+        <div class="contact-info">
+            <p>{{userInfo.firstName}} {{userInfo.lastName}}</p>
+            <p>{{userInfo.email}}</p>
+            <p>{{userInfo.phoneNumber}}</p>
+            <p>Project count: {{projectCount}}</p>
+        </div>
+    </div>
+    <div class="skills-exprience-container">
+        <div>
+            <button class="accordion" (click)="showInfo($event)">Soft skills</button>
+            <div class="panel">
+                <div class="element" *ngFor="let softSkill of userInfo.softSkills">
+                    <button class="accordion" (click)="showDescription($event)">{{softSkill.name}}</button>
+                    <div class="panel">
+                        <p class="description">{{softSkill.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="accordion" (click)="showInfo($event)">Techincal skills</button>
+            <div class="panel">
+                <div class="element" *ngFor="let technicalSkill of userInfo.TechnicalSkills">
+                    <button class="accordion" (click)="showDescription($event)">{{technicalSkill}}</button>
+                    <div class="panel">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+            <button class="accordion" (click)="showInfo($event)">Exprience</button>
+            <div class="panel">
+                <div class="element" *ngFor="let exprience of userInfo.exprience">
+                    <button class="btn-delete" (click)="deleteExprience()">delete</button><button class="btn-edit"
+                        (click)="editExprience($event)">edit</button> <button class="accordion"
+                        (click)="showDescription($event)">{{exprience.name}}</button>
+                    <div class="panel">
+                        <p class="description">{{exprience.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-add-show" (click)="showProjectAdd()">add exprience</button>
+    </div>
+</div>
+
+<div class="project-add">
+    <input class="project-name" type="text" placeholder="project name">
+    <input class="short-description" type="text" placeholder="short description">
+    <input class="btn-add" type="button" value="add" (click)="addNewExprience()">
+    <input class="btn-save-edit" type="button" value="edit" (click)="saveExprience()">
+</div>
